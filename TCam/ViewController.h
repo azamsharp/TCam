@@ -19,7 +19,4 @@
 @property (nonatomic,weak) IBOutlet UIImageView *imageView; 
 
 
--(void) populateFilters; 
-
-
 @end

@@ -13,7 +13,6 @@
 
 @implementation ViewController
 
-static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 @synthesize imageView,filtersScrollView; 
 

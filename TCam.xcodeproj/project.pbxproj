@@ -22,7 +22,6 @@
 		8DCFB9121573061400243D6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCFB9111573061400243D6A /* AppDelegate.m */; };
 		8DCFB9151573061400243D6A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DCFB9131573061400243D6A /* MainStoryboard.storyboard */; };
 		8DCFB9181573061400243D6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCFB9171573061400243D6A /* ViewController.m */; };
-		8DF6C71E1573269600E8DD04 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF6C71D1573269600E8DD04 /* HomeViewController.m */; };
 		8DF8663B1575706F00BD9189 /* biscus.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 8DF8663A1575706F00BD9189 /* biscus.JPG */; };
 /* End PBXBuildFile section */
 
@@ -49,8 +48,6 @@
 		8DCFB9141573061400243D6A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8DCFB9161573061400243D6A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8DCFB9171573061400243D6A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8DF6C71C1573269600E8DD04 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		8DF6C71D1573269600E8DD04 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		8DF8663A1575706F00BD9189 /* biscus.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = biscus.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,8 +149,6 @@
 			children = (
 				8DCFB9161573061400243D6A /* ViewController.h */,
 				8DCFB9171573061400243D6A /* ViewController.m */,
-				8DF6C71C1573269600E8DD04 /* HomeViewController.h */,
-				8DF6C71D1573269600E8DD04 /* HomeViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -227,7 +222,6 @@
 				8DCFB90E1573061400243D6A /* main.m in Sources */,
 				8DCFB9121573061400243D6A /* AppDelegate.m in Sources */,
 				8DCFB9181573061400243D6A /* ViewController.m in Sources */,
-				8DF6C71E1573269600E8DD04 /* HomeViewController.m in Sources */,
 				8D8285CD1581330E00FAD835 /* Filter.m in Sources */,
 				8D0FFD2D1583067500F20D05 /* UIImage+Extensions.m in Sources */,
 			);
