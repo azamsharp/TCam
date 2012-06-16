@@ -15,8 +15,7 @@
 
 static const int FILTER_LABEL = 001; 
     
-
-@synthesize imageView; 
+@synthesize imageView,toolbar; 
 
 - (void)didReceiveMemoryWarning
 {
@@ -37,7 +36,19 @@ static const int FILTER_LABEL = 001;
     [self setupAppearance];
     [self initializeFilterContext];
     [self loadFiltersForImage:[UIImage imageNamed:@"biscus_small.png"]];
-    
+}
+
+-(IBAction) tweetButtonTouched:(id)sender
+{
+    if([TWTweetComposeViewController canSendTweet]) 
+    {
+        TWTweetComposeViewController *tweetSheet = [[TWTweetComposeViewController alloc] init];
+        
+        [tweetSheet setInitialText:@"TCAM Tweet"];
+        [tweetSheet addImage:finalImage];
+        
+        [self presentModalViewController:tweetSheet animated:YES];
+    }
 }
 
 -(void) initializeFilterContext 
@@ -73,7 +84,6 @@ static const int FILTER_LABEL = 001;
 
 -(void) applyFilter:(id) sender 
 {
-    
         selectedFilterView.layer.shadowRadius = 0.0f; 
         selectedFilterView.layer.shadowOpacity = 0.0f;
     
@@ -93,7 +103,7 @@ static const int FILTER_LABEL = 001;
         CGImageRef cgimg = 
         [context createCGImage:outputImage fromRect:[outputImage extent]];
         
-        UIImage *finalImage = [UIImage imageWithCGImage:cgimg];
+        finalImage = [UIImage imageWithCGImage:cgimg];
         
         finalImage = [finalImage imageRotatedByDegrees:90];  
     
@@ -212,9 +222,9 @@ static const int FILTER_LABEL = 001;
 
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    finalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     
-    [self.imageView setImage:image];
+    [self.imageView setImage:finalImage];
     
    // UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
     
@@ -222,7 +232,7 @@ static const int FILTER_LABEL = 001;
     
     // load the filters again 
     
-    [self loadFiltersForImage:image];
+    [self loadFiltersForImage:finalImage];
 }
 
 - (void)viewDidUnload

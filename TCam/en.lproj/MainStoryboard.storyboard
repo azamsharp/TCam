@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Ec4-w5-ABK">
     <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
@@ -15,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="biscus_small.png" id="2Gh-Lt-nuC">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Umj-CU-lyh">
@@ -25,8 +26,12 @@
                                     <barButtonItem title="Cancel" width="57" id="wii-AC-emM">
                                         <color key="tintColor" red="0.55680429939999998" green="0.27668183169999999" blue="0.3627492209" alpha="1" colorSpace="calibratedRGB"/>
                                     </barButtonItem>
-                                    <barButtonItem title="Next" id="8wB-rL-ot0">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="HP0-7g-Enw"/>
+                                    <barButtonItem title="Tweet" id="8wB-rL-ot0">
                                         <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.03529411927" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="tweetButtonTouched:" destination="2" id="BCK-8V-NmX"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -37,6 +42,7 @@
                     <navigationItem key="navigationItem" id="kgh-c8-gDt"/>
                     <connections>
                         <outlet property="imageView" destination="2Gh-Lt-nuC" id="pup-6c-udN"/>
+                        <outlet property="toolbar" destination="Umj-CU-lyh" id="JDK-ie-xsr"/>
                     </connections>
                 </viewController>
             </objects>
@@ -68,8 +74,9 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="filtersScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="action" name="tweetButtonTouched:"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="toolbar" candidateClass="UIToolbar"/>
             </relationships>
         </class>
     </classes>

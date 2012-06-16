@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D0FFD2D1583067500F20D05 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D0FFD2C1583067500F20D05 /* UIImage+Extensions.m */; };
+		8D77A256158D123A00EB1D2C /* FilterService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D77A255158D123A00EB1D2C /* FilterService.m */; };
 		8D7DFF3B15804DB900049FF7 /* red_gradient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8D7DFF3A15804DB900049FF7 /* red_gradient.jpg */; };
 		8D8285CD1581330E00FAD835 /* Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8285CC1581330E00FAD835 /* Filter.m */; };
 		8D8521D61577F6A300526637 /* biscus_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8521D51577F6A300526637 /* biscus_small.png */; };
@@ -29,6 +30,8 @@
 /* Begin PBXFileReference section */
 		8D0FFD2B1583067500F20D05 /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
 		8D0FFD2C1583067500F20D05 /* UIImage+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extensions.m"; sourceTree = "<group>"; };
+		8D77A254158D123A00EB1D2C /* FilterService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterService.h; sourceTree = "<group>"; };
+		8D77A255158D123A00EB1D2C /* FilterService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterService.m; sourceTree = "<group>"; };
 		8D7DFF3A15804DB900049FF7 /* red_gradient.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = red_gradient.jpg; sourceTree = "<group>"; };
 		8D8285CB1581330E00FAD835 /* Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Filter.h; sourceTree = "<group>"; };
 		8D8285CC1581330E00FAD835 /* Filter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Filter.m; sourceTree = "<group>"; };
@@ -80,6 +83,15 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		8D77A252158D121A00EB1D2C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8D77A254158D123A00EB1D2C /* FilterService.h */,
+				8D77A255158D123A00EB1D2C /* FilterService.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		8D8285CA158132DC00FAD835 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,7 +104,6 @@
 		8DCFB8F21573061400243D6A = {
 			isa = PBXGroup;
 			children = (
-				8DBEE3AF158AB5F4007D8421 /* Twitter.framework */,
 				8DCFB9071573061400243D6A /* TCam */,
 				8DCFB9001573061400243D6A /* Frameworks */,
 				8DCFB8FE1573061400243D6A /* Products */,
@@ -110,6 +121,7 @@
 		8DCFB9001573061400243D6A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8DBEE3AF158AB5F4007D8421 /* Twitter.framework */,
 				8D8521D8157809DE00526637 /* QuartzCore.framework */,
 				8D9C4385157579DE00690AB1 /* CoreImage.framework */,
 				8D8521DA15780A1100526637 /* OpenGLES.framework */,
@@ -123,6 +135,7 @@
 		8DCFB9071573061400243D6A /* TCam */ = {
 			isa = PBXGroup;
 			children = (
+				8D77A252158D121A00EB1D2C /* Services */,
 				8D0FFD291583065E00F20D05 /* Extensions */,
 				8D8285CA158132DC00FAD835 /* Model */,
 				8DF6C7201573269E00E8DD04 /* Controllers */,
@@ -228,6 +241,7 @@
 				8DCFB9181573061400243D6A /* ViewController.m in Sources */,
 				8D8285CD1581330E00FAD835 /* Filter.m in Sources */,
 				8D0FFD2D1583067500F20D05 /* UIImage+Extensions.m in Sources */,
+				8D77A256158D123A00EB1D2C /* FilterService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

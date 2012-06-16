@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Twitter/Twitter.h>
 
 @interface ViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
@@ -15,9 +16,13 @@
     CIImage *beginImage; 
     UIScrollView *filtersScrollView; 
     UIView *selectedFilterView; 
+    UIImage *finalImage;
+    
 }
 
-@property (nonatomic,weak) IBOutlet UIImageView *imageView; 
+-(IBAction) tweetButtonTouched:(id) sender; 
 
+@property (nonatomic,weak) IBOutlet UIImageView *imageView; 
+@property (nonatomic,weak) IBOutlet UIToolbar *toolbar;
 
 @end
