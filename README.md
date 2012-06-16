@@ -8,8 +8,11 @@ Current Version:
 - Take pictures using your iPhone camera
 - Apply filters to the picture 
 
+
 Future Features: 
 
 - Share pictures on Twitter 
 - Share pictures on Facebook
-- Add support for flash 
+- Add support for flash on iPhone 4 and above
+
+<img src="http://www.highoncoding.com/articleimages/instagram_fake.png">
