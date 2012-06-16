@@ -13,9 +13,10 @@
     CIContext *context; 
     NSMutableArray *filters; 
     CIImage *beginImage; 
+    UIScrollView *filtersScrollView; 
+    UIView *selectedFilterView; 
 }
 
-@property (nonatomic,weak) IBOutlet UIScrollView *filtersScrollView; 
 @property (nonatomic,weak) IBOutlet UIImageView *imageView; 
 
 

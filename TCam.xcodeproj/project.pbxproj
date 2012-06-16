@@ -14,6 +14,7 @@
 		8D8521D9157809DE00526637 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8521D8157809DE00526637 /* QuartzCore.framework */; };
 		8D8521DB15780A1100526637 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8521DA15780A1100526637 /* OpenGLES.framework */; };
 		8D9C4386157579DE00690AB1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9C4385157579DE00690AB1 /* CoreImage.framework */; };
+		8DBEE3B0158AB5F4007D8421 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBEE3AF158AB5F4007D8421 /* Twitter.framework */; };
 		8DCFB9021573061400243D6A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DCFB9011573061400243D6A /* UIKit.framework */; };
 		8DCFB9041573061400243D6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DCFB9031573061400243D6A /* Foundation.framework */; };
 		8DCFB9061573061400243D6A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DCFB9051573061400243D6A /* CoreGraphics.framework */; };
@@ -35,6 +36,7 @@
 		8D8521D8157809DE00526637 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8D8521DA15780A1100526637 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		8D9C4385157579DE00690AB1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		8DBEE3AF158AB5F4007D8421 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		8DCFB8FD1573061400243D6A /* TCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCFB9011573061400243D6A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8DCFB9031573061400243D6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DBEE3B0158AB5F4007D8421 /* Twitter.framework in Frameworks */,
 				8D8521D9157809DE00526637 /* QuartzCore.framework in Frameworks */,
 				8D8521DB15780A1100526637 /* OpenGLES.framework in Frameworks */,
 				8D9C4386157579DE00690AB1 /* CoreImage.framework in Frameworks */,
@@ -89,6 +92,7 @@
 		8DCFB8F21573061400243D6A = {
 			isa = PBXGroup;
 			children = (
+				8DBEE3AF158AB5F4007D8421 /* Twitter.framework */,
 				8DCFB9071573061400243D6A /* TCam */,
 				8DCFB9001573061400243D6A /* Frameworks */,
 				8DCFB8FE1573061400243D6A /* Products */,

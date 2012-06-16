@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Ec4-w5-ABK">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
@@ -15,20 +14,28 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="biscus_small.png" id="2Gh-Lt-nuC">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="337"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="biscus_small.png" id="2Gh-Lt-nuC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="WTP-P3-1LF">
-                                <rect key="frame" x="0.0" y="345" width="320" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </scrollView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Umj-CU-lyh">
+                                <rect key="frame" x="0.0" y="372" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Cancel" width="57" id="wii-AC-emM">
+                                        <color key="tintColor" red="0.55680429939999998" green="0.27668183169999999" blue="0.3627492209" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem title="Next" id="8wB-rL-ot0">
+                                        <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.03529411927" alpha="1" colorSpace="deviceRGB"/>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="kgh-c8-gDt"/>
                     <connections>
-                        <outlet property="filtersScrollView" destination="WTP-P3-1LF" id="WMy-ql-bSK"/>
                         <outlet property="imageView" destination="2Gh-Lt-nuC" id="pup-6c-udN"/>
                     </connections>
                 </viewController>

@@ -13,8 +13,10 @@
 
 @implementation ViewController
 
+static const int FILTER_LABEL = 001; 
+    
 
-@synthesize imageView,filtersScrollView; 
+@synthesize imageView; 
 
 - (void)didReceiveMemoryWarning
 {
@@ -27,9 +29,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    
-    
     [self setup];    
 }
 
@@ -37,31 +36,33 @@
 {
     [self setupAppearance];
     [self initializeFilterContext];
-    //[self loadFilters];
+    [self loadFiltersForImage:[UIImage imageNamed:@"biscus_small.png"]];
     
 }
 
 -(void) initializeFilterContext 
 {
     context = [CIContext contextWithOptions:nil];
- 
 }
 
 -(void) setupAppearance 
 {
-    [self.filtersScrollView setScrollEnabled:YES];
-    [self.filtersScrollView setShowsVerticalScrollIndicator:NO];
+    filtersScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 300, self.view.bounds.size.width, 90)];
+
+    [filtersScrollView setScrollEnabled:YES];
+    [filtersScrollView setShowsVerticalScrollIndicator:NO];
+    filtersScrollView.showsHorizontalScrollIndicator = NO; 
 
     UIBarButtonItem *cameraBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(takePicture:)];
     
     [[self navigationItem] setRightBarButtonItem:cameraBarButtonItem];
     
+    [self.view addSubview:filtersScrollView];    
+    
 }
 
 -(void) applyGesturesToFilterPreviewImageView:(UIView *) view 
 {
-    NSLog(@"applyGesturesToFilterPreviewImageView");
-    
     UITapGestureRecognizer *singleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(applyFilter:)];
 
     singleTapGestureRecognizer.numberOfTapsRequired = 1; 
@@ -69,11 +70,22 @@
     [view addGestureRecognizer:singleTapGestureRecognizer];        
 }
 
+
 -(void) applyFilter:(id) sender 
 {
-    NSLog(@"applyFilter");
     
-        int filterIndex = [(UITapGestureRecognizer *) sender view].tag;
+        selectedFilterView.layer.shadowRadius = 0.0f; 
+        selectedFilterView.layer.shadowOpacity = 0.0f;
+    
+        selectedFilterView = [(UITapGestureRecognizer *) sender view];
+    
+        selectedFilterView.layer.shadowColor = [UIColor yellowColor].CGColor;
+        selectedFilterView.layer.shadowRadius = 3.0f; 
+        selectedFilterView.layer.shadowOpacity = 0.9f;
+        selectedFilterView.layer.shadowOffset = CGSizeZero;
+        selectedFilterView.layer.masksToBounds = NO;
+    
+        int filterIndex = selectedFilterView.tag; 
         Filter *filter = [filters objectAtIndex:filterIndex];
     
         CIImage *outputImage = [filter.filter outputImage];
@@ -93,11 +105,14 @@
 
 -(void) createPreviewViewsForFilters
 {
-    int offsetX = 0; 
+    int offsetX = 10; 
 
     for(int index = 0; index < [filters count]; index++)
     {
         UIView *filterView = [[UIView alloc] initWithFrame:CGRectMake(offsetX, 0, 60, 60)];
+        
+        
+        filterView.tag = index; 
         
         // create a label to display the name 
         UILabel *filterNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, filterView.bounds.size.width, 8)];
@@ -129,7 +144,7 @@
         
         [filterView setUserInteractionEnabled:YES];
         
-        filterPreviewImageView.layer.cornerRadius = 10;  
+        filterPreviewImageView.layer.cornerRadius = 15;  
         filterPreviewImageView.opaque = NO;
         filterPreviewImageView.backgroundColor = [UIColor clearColor];
         filterPreviewImageView.layer.masksToBounds = YES;        
@@ -142,13 +157,13 @@
         [filterView addSubview:filterPreviewImageView];
         [filterView addSubview:filterNameLabel];
         
-        [self.filtersScrollView addSubview:filterView];
+        [filtersScrollView addSubview:filterView];
         
         offsetX += filterView.bounds.size.width + 10;
         
     }
     
-     [self.filtersScrollView setContentSize:CGSizeMake(400, 60)]; 
+     [filtersScrollView setContentSize:CGSizeMake(400, 90)]; 
 }
 
 -(void) loadFiltersForImage:(UIImage *) image
@@ -198,27 +213,6 @@
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    
-    if(image.imageOrientation == UIImageOrientationUp) 
-    {
-        NSLog(@"Portrait");
-    }
-    else if(image.imageOrientation == UIImageOrientationDown) 
-    {
-         NSLog(@"Down");
-    }
-    else if(image.imageOrientation == UIImageOrientationRight) 
-    {
-         NSLog(@"didFinishPickingMediaWithInfo: Right");
-    }
-    else if(image.imageOrientation == UIImageOrientationLeft) 
-    {
-         NSLog(@"Left");
-    }
-        
-    // rotate the image 
-    
-   // [self rotate:image];
     
     [self.imageView setImage:image];
     
