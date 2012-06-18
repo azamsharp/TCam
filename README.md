@@ -7,12 +7,6 @@ TCAM is my take on building an app like Instagram. TCAM uses the Core Image feat
 
 - Take pictures using your iPhone camera
 - Apply filters to the picture 
-
-
-<b>Future Features: </b>
-
-- Share pictures on Twitter 
-- Share pictures on Facebook
-- Add support for flash on iPhone 4 and above
+- Share picture on Twitter
 
 <img src="http://www.highoncoding.com/articleimages/instagram_fake.png">
