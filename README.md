@@ -9,4 +9,6 @@ TCAM is my take on building an app like Instagram. TCAM uses the Core Image feat
 - Apply filters to the picture 
 - Share picture on Twitter
 
-<img src="http://www.highoncoding.com/articleimages/instagram_fake.png">
+<img src="http://www.highoncoding.com/articleimages/tcam1.png">
+
+<img src="http://www.highoncoding.com/articleimages/tcam2.png">
