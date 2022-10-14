@@ -12,3 +12,5 @@ TCAM is my take on building an app like Instagram. TCAM uses the Core Image feat
 <img src="http://www.highoncoding.com/articleimages/tcam1.png">
 
 <img src="http://www.highoncoding.com/articleimages/tcam2.png">
+
+Copyright 2022
